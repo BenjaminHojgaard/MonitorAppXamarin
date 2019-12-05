@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MonitorAppXam.Pages.SignInPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!--<Image Grid.Row="0" HeightRequest="250" WidthRequest="200" Source="homescreen.jpg" Aspect="Fill"/>-->
+        <BoxView HeightRequest="250" WidthRequest="200" Color="#369BCD"/>
+        <Label Text="O2matic Home Oxygen Therapy" Margin="0,50,0,0" TextColor="White" FontSize="40" HorizontalTextAlignment="Center"/>
+        <StackLayout Grid.Row="1" Margin="40,40,40,0" Spacing="30">
+            <ActivityIndicator Grid.Row="1" x:Name="activityIndicator" IsVisible="False"/>
+            <Entry Placeholder="Email" PlaceholderColor="#707070" x:Name="EntEmail"/>
+            <Entry Placeholder="Password" PlaceholderColor="#707070" x:Name="EntPassword" IsPassword="True"/>
+            <Button Text="Login" BackgroundColor="#C62729" TextColor="White" x:Name="BtnLogin" Clicked="BtnLogin_Clicked"></Button>
+        </StackLayout>
+
+        <StackLayout Grid.Row="2" Padding="20" Orientation="Horizontal" HorizontalOptions="Center">
+            <Label Text="Don't have an account?"/>
+            <StackLayout Spacing="0">
+                <Label Text="Sign Up" FontAttributes="Bold"/>
+                <BoxView BackgroundColor="Black" HeightRequest="1"/>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="TapSignUp" NumberOfTapsRequired="1" Tapped="TapSignUp_Tapped"/>
+
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+        </StackLayout>
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MonitorAppXam.Pages.HomePage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Logout" x:Name="Tblogout" Clicked="Tblogout_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <AbsoluteLayout BackgroundColor="White">
+            <Image Aspect="Fill" Source="homescreen.jpg" AbsoluteLayout.LayoutBounds="0,0,1,0.4" AbsoluteLayout.LayoutFlags="All"/>
+            <Label Text="O2matic Home Oxygen Therapy" Margin="0,50,0,0" TextColor="White" FontSize="40" HorizontalTextAlignment="Center"/>
+            <Grid AbsoluteLayout.LayoutBounds="0,1,1,0.6" AbsoluteLayout.LayoutFlags="All" BackgroundColor="White">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.4*"/>
+                    <ColumnDefinition Width="0.2*"/>
+                    <ColumnDefinition Width="0.4* "/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Row="0" Grid.Column="0" Margin="50,50,0,0" VerticalOptions="Center">
+                    <Image Source="baseline_person_add_black_18dp.png" WidthRequest="50" HeightRequest="50"></Image>
+                    <Label Text="Add patient" HorizontalTextAlignment="Center" FontSize="Default"></Label>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer  x:Name="TapAddPatient" Tapped="AddPatient_Tapped" NumberOfTapsRequired="1"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                <StackLayout Grid.Row="0" Grid.Column="2" Margin="0,50,40,0" VerticalOptions="Center">
+                    <Image Source="baseline_people_alt_black_18dp.png" WidthRequest="50" HeightRequest="50"></Image>
+                    <Label Text="My patients" HorizontalTextAlignment="Center" FontSize="Default"></Label>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer  x:Name="TapMyPatients" Tapped="MyPatients_Tapped" NumberOfTapsRequired="1"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                <Image Source="linev.png" Grid.Row="0" Grid.Column="1" Grid.RowSpan="3"></Image>
+                <Image Source="lineh.png" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"></Image>
+
+                <StackLayout Grid.Row="2" Grid.Column="0" Margin="50,-30,0,0" VerticalOptions="Center">
+                    <Image Source="baseline_notifications_black_18dp.png" WidthRequest="50" HeightRequest="50"></Image>
+                    <Label Text="Notifications" HorizontalTextAlignment="Center" FontSize="Default"></Label>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer  x:Name="TapNotifications" Tapped="Notifications_Tapped" NumberOfTapsRequired="1"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" Grid.Column="2" Margin="0,-30,40,0" VerticalOptions="Center">
+                    <Image Source="baseline_help_outline_black_18dp.png" WidthRequest="50" HeightRequest="50"></Image>
+                    <Label Text="Help" HorizontalTextAlignment="Center" FontSize="Default"></Label>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer  x:Name="TapHelp" Tapped="Help_Tapped" NumberOfTapsRequired="1"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+            </Grid>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

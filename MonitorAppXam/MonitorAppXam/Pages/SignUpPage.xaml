@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MonitorAppXam.Pages.SignUpPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image Source="homescreen.jpg" Aspect="Fill" HeightRequest="200" WidthRequest="200" Grid.Row="0" />
+        <StackLayout Grid.Row="1" Margin="40,20,40,0" Spacing="30">
+            <Entry Placeholder="Email" PlaceholderColor="#707070" x:Name="EntEmail"/>
+            <Entry Placeholder="Password" PlaceholderColor="#707070" x:Name="EntPassword" IsPassword="True"/>
+            <Entry Placeholder="Confirm Password" PlaceholderColor="#707070" x:Name="EntConfirmPassword" IsPassword="True"/>
+            <Picker Title="Relation" TextColor="#A5A7A8" x:Name="PickerRelation">
+                <Picker.Items>
+                    <x:String>Medical Staff</x:String>
+                    <x:String>Relative</x:String>
+                </Picker.Items>
+            </Picker>
+            <Button Text="Sign Up" BackgroundColor="#C62729" TextColor="White" x:Name="BtnSignUp" Clicked="BtnSignUp_Clicked"></Button>
+        </StackLayout>
+    </Grid>
+</ContentPage>
