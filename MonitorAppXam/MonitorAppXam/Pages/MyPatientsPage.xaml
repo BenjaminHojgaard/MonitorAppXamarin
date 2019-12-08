@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="MonitorAppXam.Pages.MyPatientsPage">
-    <StackLayout>
+    <StackLayout Orientation="Vertical">
+        <Label Text="My Patients" FontSize="Title" Margin="5,10,0,0"/>
         <ListView Margin="5" x:Name="LvMyPatients" HasUnevenRows="True" ItemSelected="LvMyPatients_ItemSelected" SeparatorColor="Accent">
             <ListView.ItemTemplate>
                 <DataTemplate>
