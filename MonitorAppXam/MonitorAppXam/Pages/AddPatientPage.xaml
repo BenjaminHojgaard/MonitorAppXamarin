@@ -4,12 +4,26 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="MonitorAppXam.Pages.AddPatientPage">
+             x:Class="MonitorAppXam.Pages.AddPatientPage"
+             BackgroundColor="#afd3e1">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <BoxView HeightRequest="250" WidthRequest="200" Color="#369BCD"/>
+            <Label Text="O2matic Home Oxygen Therapy" Margin="0,50,0,0" TextColor="White" FontSize="40" HorizontalTextAlignment="Center"/>
+            <StackLayout Grid.Row="1" Margin="40,40,40,0" Spacing="30">
+                <ActivityIndicator Grid.Row="1" x:Name="activityIndicator" IsVisible="False"/>
+                <Entry Placeholder="First Name" PlaceholderColor="#707070" x:Name="EntFirstName"/>
+                <Entry Placeholder="Patient ID" PlaceholderColor="#707070" x:Name="EntPatientID" IsPassword="True"/>
+                <Button Text="Add" BackgroundColor="#C62729" TextColor="White" x:Name="BtnAdd" Clicked="BtnAdd_Clicked" CornerRadius="5"></Button>
+            </StackLayout>
+
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

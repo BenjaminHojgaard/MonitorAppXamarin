@@ -10,7 +10,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Image Source="homescreen.jpg" Aspect="Fill" HeightRequest="200" WidthRequest="200" Grid.Row="0" />
+        <!--<Image Source="homescreen.jpg" Aspect="Fill" HeightRequest="200" WidthRequest="200" Grid.Row="0" />-->
         <StackLayout Grid.Row="1" Margin="40,20,40,0" Spacing="30">
             <Entry Placeholder="Email" PlaceholderColor="#707070" x:Name="EntEmail"/>
             <Entry Placeholder="Password" PlaceholderColor="#707070" x:Name="EntPassword" IsPassword="True"/>

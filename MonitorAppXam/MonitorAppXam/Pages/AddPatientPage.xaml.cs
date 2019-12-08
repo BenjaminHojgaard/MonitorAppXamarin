@@ -16,5 +16,12 @@ namespace MonitorAppXam.Pages
         {
             InitializeComponent();
         }
+
+        private async void BtnAdd_Clicked(object sender, EventArgs e)
+        {
+            EntFirstName.Text = "";
+            EntPatientID.Text = "";
+            await DisplayAlert("Notice", "If a patient with the supplied name and ID exists, they will receive a notification. If they accept your request, the patient will appear in 'My Patients' found on the Home page.", "OK");
+        }
     }
 }

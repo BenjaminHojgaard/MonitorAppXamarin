@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MonitorAppXam.Pages.PatientPage"
+             BackgroundColor="#afd3e1">
+    <Grid Margin="0,20,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*"></ColumnDefinition>
+            <ColumnDefinition Width="0.25*"></ColumnDefinition>
+            <ColumnDefinition Width="0.25*"></ColumnDefinition>
+            <ColumnDefinition Width="0.25*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Image Margin="5,0,0,0" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="3" Source="baseline_person_black_18dp.png" WidthRequest="120" HeightRequest="120"></Image>
+        <Label BackgroundColor="#5bc0de" TextColor="White" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Margin="0,0,10,0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" x:Name="FirstNameLabel" Text="{Binding FirstName, FallbackValue='FallbackValue'}"/>
+        <Label BackgroundColor="#2A2B75" TextColor="White" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Margin="0,0,10,0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" x:Name="PatientIDLabel" Text="{Binding PatientID, FallbackValue='FallbackValue'}"/>
+        <Label BackgroundColor="#2A2B75" TextColor="White" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="0,0,10,0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" x:Name="LastMeasurementLabel" Text="{Binding LastMeasurement, StringFormat='Last Measurement: {0:dd/MM/yyyy HH:mm}', FallbackValue='FallbackValue'}"/>
+        <Image Source="lineh.png" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4"/>
+        <Button TextColor="White" Text="Go to Graph" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#C62729" CornerRadius="5" FontSize="Small" Margin="10,0,0,0" Clicked="Button_Clicked"></Button>
+        <Button TextColor="White" Text="Set Alerts" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" BackgroundColor="#C62729" CornerRadius="5" FontSize="Small" Margin="0,0,10,0"></Button>
+        <Image Source="lineh.png" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4"/>
+        <Label Margin="10,0,10,0" Grid.Row="7" Grid.ColumnSpan="4" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam."/>
+        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" Text="{Binding FirstName, StringFormat='Notes on {0}', FallbackValue='Notes'}" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#C62729" FontSize="Small" Margin="10,0,0,0"></Label>
+        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" Text="Edit Notes" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" BackgroundColor="#C62729" FontSize="Small" Margin="0,0,10,0"></Label>
+
+    </Grid>
+</ContentPage>

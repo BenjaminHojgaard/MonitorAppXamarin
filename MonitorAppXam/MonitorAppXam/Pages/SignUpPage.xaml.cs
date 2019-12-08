@@ -23,7 +23,7 @@ namespace MonitorAppXam.Pages
         {
             ApiAccountService apiServices = new ApiAccountService();
             selectedRelation = PickerRelation.SelectedItem as string;
-            bool response = await apiServices.RegisterUser(EntEmail.Text, EntPassword.Text, EntConfirmPassword.Text, selectedRelation);
+            bool response = await apiServices.RegisterPrivilegedUser(EntEmail.Text, EntPassword.Text, EntConfirmPassword.Text, selectedRelation);
 
             if (!response)
             {

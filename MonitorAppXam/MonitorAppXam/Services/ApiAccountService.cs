@@ -15,6 +15,10 @@ namespace MonitorAppXam.Services
     {
         public async Task<bool> RegisterPrivilegedUser(string email, string password, string confirmPassword, string relation)
         {
+            if (String.Equals(relation, "Medical", StringComparison.OrdinalIgnoreCase))
+            {
+                relation = "admin";
+            }
             var registerModel = new RegisterModel()
             {
                 Email = email,
