@@ -40,7 +40,7 @@ namespace MonitorAppXam.Pages
 
         private async void Notifications_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new SignUpPage());
+            await Navigation.PushAsync(new NotificationsPage());
         }
         private async void Help_Tapped(object sender, EventArgs e)
         {

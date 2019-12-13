@@ -24,9 +24,14 @@ namespace MonitorAppXam.Pages
 
         }
 
-        private async void Button_Clicked(object sender, EventArgs e)
+        private async void Go_To_Graph_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new TrendsPage());
+        }
+
+        private async void Set_Alerts_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AlertsPage());
         }
     }
 }
