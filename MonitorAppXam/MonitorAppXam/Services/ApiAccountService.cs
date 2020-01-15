@@ -13,11 +13,13 @@ namespace MonitorAppXam.Services
 {
     class ApiAccountService
     {
+        private static readonly string BaseURL = "https://monitorappdevtest.azurewebsites.net/";
+        private static readonly string AccountURL = "https://monitorappdevtest.azurewebsites.net/api/Account/";
         public async Task<bool> RegisterPrivilegedUser(string email, string password, string confirmPassword, string relation)
         {
             if (String.Equals(relation, "Medical", StringComparison.OrdinalIgnoreCase))
             {
-                relation = "admin";
+                relation = "medic";
             }
             var registerModel = new RegisterModel()
             {
@@ -37,7 +39,7 @@ namespace MonitorAppXam.Services
 
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-                var response = await httpClient.PostAsync("https://monitorappdevtest.azurewebsites.net/api/Account/RegisterTest", content);
+                var response = await httpClient.PostAsync(AccountURL + "RegisterTest", content);
 
                 return response.IsSuccessStatusCode;
             }
@@ -60,7 +62,7 @@ namespace MonitorAppXam.Services
 
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-                var response = await httpClient.PostAsync("https://monitorappdevtest.azurewebsites.net/api/Account/Register", content);
+                var response = await httpClient.PostAsync(AccountURL + "Register", content);
 
                 return response.IsSuccessStatusCode;
             }
@@ -76,7 +78,7 @@ namespace MonitorAppXam.Services
 
             };
 
-            var request = new HttpRequestMessage(HttpMethod.Post, "https://monitorappdevtest.azurewebsites.net/Token");
+            var request = new HttpRequestMessage(HttpMethod.Post, BaseURL + "Token");
 
             request.Content = new FormUrlEncodedContent(keyvalues);
 
