@@ -6,7 +6,8 @@
              mc:Ignorable="d"
              x:Class="MonitorAppXam.Pages.HelpPage">
     <StackLayout>
-        <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."></Label>
-        <Label Text="" Margin="0,40,0,0"></Label>
+        <Label Margin="20,20,20,0" TextColor="Black" Text="- To use this app: Navigate to 'Add patient', and type in First Name and Patient ID of the relevant patient." />
+        <Label Margin="20,10,20,0" TextColor="Black" Text="- If you do not know the Patient ID of the patient, you need to contact the patient, as Monitor-App cannot give you patient IDs." />
+        <Label Margin="20,10,20,0" TextColor="Black" Text="- Once you add a patient, a request will be sent to them asking to see their HOT data. Should they accept your request they will appear under the 'My Patients' tab." />
     </StackLayout>
 </ContentPage>

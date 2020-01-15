@@ -11,7 +11,7 @@
     <ContentPage.Content>
         <AbsoluteLayout BackgroundColor="White">
             <Image Aspect="Fill" Source="homescreen.jpg" AbsoluteLayout.LayoutBounds="0,0,1,0.4" AbsoluteLayout.LayoutFlags="All"/>
-            <Label Text="O2matic Home Oxygen Therapy" Margin="0,50,0,0" TextColor="White" FontSize="40" HorizontalTextAlignment="Center"/>
+            <Label Text="O2matic Home Oxygen Therapy" Margin="0,50,0,0" TextColor="#000184" FontSize="40" HorizontalTextAlignment="Center"/>
             <Grid AbsoluteLayout.LayoutBounds="0,1,1,0.6" AbsoluteLayout.LayoutFlags="All" BackgroundColor="White">
 
                 <Grid.RowDefinitions>
